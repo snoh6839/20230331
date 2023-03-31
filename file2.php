@@ -33,4 +33,26 @@ for ($i = 2; $i <= 9; $i++) {
 }
 
 fclose($myfile);
+
+<?php
+$myfile = fopen("newfile.txt", "a") or die("Unable to open file!");
+
+$text_arr = array();
+for ($i = 2; $i <= 9; $i++) {
+    $text = $i . "단 입니다.\n";
+    $text_arr[] = $text;
+
+    for ($j = 1; $j <= 9; $j++) {
+        $text = $i . " X " . $j . " = " . ($i * $j) . "\n";
+        $text_arr[] = $text;
+    }
+    $text_arr[] = "\n";
+}
+
+$text = implode("", $text_arr);
+fputs($myfile, $text);
+
+fclose($myfile);
+?>
+
 ?>
