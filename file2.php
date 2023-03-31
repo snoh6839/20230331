@@ -34,8 +34,7 @@ for ($i = 2; $i <= 9; $i++) {
 
 fclose($myfile);
 
-<?php
-$myfile = fopen("newfile.txt", "a") or die("Unable to open file!");
+$myfile2 = fopen("newfile2.txt", "a") or die("Unable to open file!");
 
 $text_arr = array();
 for ($i = 2; $i <= 9; $i++) {
@@ -50,9 +49,8 @@ for ($i = 2; $i <= 9; $i++) {
 }
 
 $text = implode("", $text_arr);
-fputs($myfile, $text);
+fputs($myfile2, $text);
 
-fclose($myfile);
-?>
+fclose($myfile2);
 
 ?>
