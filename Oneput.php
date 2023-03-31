@@ -1,5 +1,5 @@
 <?php
-$myfile = fopen("newfile.txt", "a") or die("Unable to open file!");
+$myfile = fopen("newfile2.txt", "a") or die("Unable to open file!");
 
 $text = "";
 for ($i = 2; $i <= 9; $i++) {
@@ -10,7 +10,7 @@ for ($i = 2; $i <= 9; $i++) {
     $text .= "\n";
 }
 
-fputs($myfile, $text);
+// fputs($myfile, $text);
 
 fclose($myfile);
 ?>
