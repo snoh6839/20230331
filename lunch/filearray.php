@@ -34,8 +34,10 @@ $new_data = '스테이크';
 array_splice($data, $position, 0, [$new_data]);
 file_put_contents($file, implode(PHP_EOL, $data));
 
+//PHP_EOL
+//'End Of Line' 
 //file_put_contents() writes data to a file
 //FILE_IGNORE_NEW_LINES
-//Skip the newline at the end of each array elemen
+//Skip the newline at the end of each array element
 
 ?>
