@@ -23,14 +23,6 @@ if (mysqli_num_rows($result_query_emp_no) > 0) {
 }
 
 
-while ($row = mysqli_fetch_assoc($result_query_emp_no)) {
-    echo "emp_no: " . $row["emp_no"] . " full_name: " . $row["full_name"] . " gender: " . $row["gender"] . " birth_date: " . $row["birth_date"] . "\n" ;
-}
-if (mysqli_fetch_row($result_query_emp_no) == null) {
-    echo "0 results";
-}
-
-
 mysqli_close($dbc);
 
 ?>
